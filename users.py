@@ -35,7 +35,7 @@ class User():
 
 	def auth(self, login, password):
 		self.login = login
-		self.__password = password
+		self.password = password
 		sql.execute(f"SELECT login FROM users WHERE login = '{login}'")
 		if sql.fetchone() is None:
 			raise ValueError('no such user exists')
