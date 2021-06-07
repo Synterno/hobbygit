@@ -1,3 +1,4 @@
+# простой парсер на bs
 import bs4
 import requests
 import sqlite3

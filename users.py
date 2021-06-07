@@ -1,3 +1,4 @@
+# регистрация и авторизация юзера
 import sqlite3
 
 db = sqlite3.connect('users.db')

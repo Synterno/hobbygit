@@ -1,3 +1,4 @@
+# SmartBeekeeper v.0.5, ПО для мониторинга пасеки
 import sqlite3
 from colorama import init, Fore, Style
 
