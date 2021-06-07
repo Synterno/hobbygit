@@ -28,27 +28,25 @@ class User():
 
 				sql.execute(f'INSERT INTO users VALUES (?, ?)', (login, password))
 				db.commit()
-				print(login + ' user created')
+				print(login + ' success created')
 
 			else:
 				raise ValueError('user with this login already exists')
 
 	def auth(self, login, password):
 		self.login = login
-		self.password = password
+		self.__password = password
 		sql.execute(f"SELECT login FROM users WHERE login = '{login}'")
 		if sql.fetchone() is None:
 			raise ValueError('no such user exists')
 
 		else:
-			print('success authorization')
+			print(login + ' success authorization')
 
 	def user_info(self):
 		print("user info: \n" + "login: " + self.login + "\n" + "password: " + self.password)
 
 
 a = User()
-a.reg("qwerty", "qwertypassword")
-a.auth("qwerty", "qwertypassword")
-a.user_info()
-
+a.reg("qwerty5", "qwertypassword")
+a.auth("qwerty5", "qwertypassword")
