@@ -48,7 +48,7 @@ class User():
 
 
 a = User()
-a.reg("qwerty9", "qwerty33")
-a.auth("qwerty9", "qwerty33")
+a.reg("qwerty", "qwertypassword")
+a.auth("qwerty", "qwertypassword")
 a.user_info()
 
