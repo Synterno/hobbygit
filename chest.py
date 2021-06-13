@@ -1,3 +1,4 @@
+# chest for warrior.py
 class Chest:
 
     def give_gold(self, count):
