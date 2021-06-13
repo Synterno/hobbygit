@@ -1,4 +1,6 @@
-class Warrior:
+from chest import Chest
+
+class Warrior(Chest):
 
     def __init__(self, name, lvl=1):
         self.name = name # warrior's name
@@ -19,6 +21,9 @@ class Warrior:
             self.rs = 7
         else:
             raise ValueError('error')
+        self.gold = 0
+        self.silver = 0
+        self.copper = 0
 
     def armor(self, complect=1):
         self.complect = complect
@@ -80,3 +85,4 @@ x.sword('silver_sword')
 x.shield('iron_shield')
 x.baff('windwalk')
 x.info()
+x.balance_info()
