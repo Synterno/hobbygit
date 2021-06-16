@@ -1,3 +1,5 @@
+# part of rpg.py
+
 from chest import Chest
 
 class Warrior(Chest):
@@ -78,25 +80,7 @@ class Warrior(Chest):
         print("health: " + str(self.hp))
         print("armor: " + str(self.ap))
         print("speed: " + str(self.rs))
-
-x = Warrior("Witcher", 2)
-x.armor(2)
-x.sword('silver_sword')
-x.shield('iron_shield')
-x.baff('windwalk')
-x.info()
-x.give_gold(10)
-x.give_silver(35)
-x.give_copper(140)
-x.balance_info()
-
-y = Warrior("Vesemir", 3)
-y.armor(3)
-y.sword('silver_sword')
-y.shield('iron_shield')
-y.baff('rage')
-y.info()
-y.give_gold(60)
-y.give_silver(180)
-y.give_copper(240)
-y.balance_info()
+        print("gold: " + str(self.gold))
+        print("silver: " + str(self.silver))
+        print("copper: " + str(self.copper))
+        print('\n')

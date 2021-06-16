@@ -1,4 +1,5 @@
-# chest for warrior.py
+# part of rpg.py
+
 class Chest:
 
     def give_gold(self, count):
@@ -51,9 +52,3 @@ class Chest:
         self.copper = self.copper - (6 * gold + 3 * silver)
         self.gold = gold
         self.silver = silver
-
-    def balance_info(self):
-        print(str(self.name) + " chest balance: ")
-        print("gold: " + str(self.gold))
-        print("silver: " + str(self.silver))
-        print("copper: " + str(self.copper))
