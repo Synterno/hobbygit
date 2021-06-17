@@ -1,4 +1,4 @@
-# MAIN of warrior.py mobs.py chest.py mechanics.py
+# MAIN of warrior.py mobs.py chest.py
 
 from warrior import Warrior
 from mobs import Orc, Dragon
