@@ -1,4 +1,4 @@
-# регистрация и авторизация юзера
+# registration / authorization
 import sqlite3
 
 db = sqlite3.connect('users.db')
