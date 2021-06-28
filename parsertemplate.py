@@ -1,4 +1,4 @@
-# простой парсер на bs
+# parser
 import bs4
 import requests
 import sqlite3
@@ -6,7 +6,7 @@ import sqlite3
 
 db = sqlite3.connect('parse.db')
 sql = db.cursor()
-# СОЗДАНИЕ ТАБЛИЦЫ В БД
+
 sql.execute("""CREATE TABLE IF NOT EXISTS table (
     title TEXT,
     price TEXT,
@@ -14,7 +14,7 @@ sql.execute("""CREATE TABLE IF NOT EXISTS table (
 )""")
 db.commit()
 
-# ПАРСИНГ ФУНКЦИЯ, ЗАПОЛНИ ...
+# fill ...
 def parse():
     URL = '...'
     HEADERS = {
@@ -35,7 +35,7 @@ def parse():
             sql.execute(f'INSERT INTO table VALUES (?, ?, ?)', (comp['title'], comp['price'], comp['game']))
             db.commit()
 
-# УДАЛЕНИЕ ДУБЛИКАТОВ ИЗ БД
+# remove duplicates
 sql.execute('DELETE FROM table WHERE rowid NOT IN (select min(rowid) FROM table GROUP BY title, price, game)')
 db.commit()
 
